@@ -1,11 +1,14 @@
 import styled from 'styled-components';
+import { Outlet } from 'react-router-dom';
+import Footer from '../Components/footer';
 const MOBILE_MAX_WIDTH = '480px';
 
 const AppContainer = styled.div`
   // 모바일 스타일 (기본값)
   width: 100%;
   min-height: 100%;
-  background-color: #ffffff;
+  background-color: black;
+  padding-bottom: 70px;
 
   // PC 환경 스타일: width가 MOBILE_MAX_WIDTH보다 커지면 미디어쿼리 적용
   @media (min-width: ${MOBILE_MAX_WIDTH}) {
@@ -17,12 +20,13 @@ const AppContainer = styled.div`
   }
 `;
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return <AppContainer>{children}</AppContainer>;
+const Layout: React.FC = () => {
+  return (
+    <AppContainer>
+      <Outlet />
+      <Footer />
+    </AppContainer>
+  );
 };
 
 export default Layout;

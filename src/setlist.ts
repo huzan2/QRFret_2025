@@ -533,7 +533,7 @@ export const setlist: Song[] = [
   },
   {
     idx: 21,
-    title: 'Godd morning sunshine',
+    title: 'Good morning sunshine',
     artist: 'The poles',
     sessions: [
       {

@@ -24,7 +24,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
 
-  // #root div도 화면 전체 높이를 차지하도록 설정
   #root {
     height: 100%;
   }

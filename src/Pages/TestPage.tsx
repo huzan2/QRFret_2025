@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
-
-// 번호표 관련 훅 및 스토어
 import { useTicketStore } from '../store/ticketStore';
 import { useTicketService } from '../hooks/useTicketService';
-
-// 방명록 관련 훅
 import { useGuestbookService } from '../hooks/useGuestbookService';
 
-// 방명록 항목 스타일
 const guestbookItemStyle: React.CSSProperties = {
   border: '1px solid #eee',
   padding: '1rem',
@@ -16,21 +11,9 @@ const guestbookItemStyle: React.CSSProperties = {
   backgroundColor: '#fafafa',
 };
 
-// TestPage 컴포넌트
 const TestPage: React.FC = () => {
-  /*
-  ================================================================
-    1. 번호표 (Ticket) 섹션 로직
-  ================================================================
-  */
-
-  // Zustand 스토어에서 현재 티켓 상태를 가져옵니다.
   const currentTicket = useTicketStore((state) => state.ticket);
-
-  // 번호표 폼 입력을 위한 로컬 상태
   const [phoneNumber, setPhoneNumber] = useState<string>('');
-
-  // 번호표 API 훅 (이름 충돌을 피하기 위해 loading/error 이름 변경)
   const {
     requestTicket,
     resetTicket,
@@ -38,26 +21,16 @@ const TestPage: React.FC = () => {
     error: ticketError,
   } = useTicketService();
 
-  // 번호표 폼 제출 핸들러
   const handleTicketSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (ticketLoading) return;
     await requestTicket(phoneNumber);
   };
 
-  // 번호표 리셋 핸들러
   const handleTicketReset = () => {
     if (ticketLoading) return;
     resetTicket();
   };
-
-  /*
-  ================================================================
-    2. 방명록 (Guestbook) 섹션 로직
-  ================================================================
-  */
-
-  // 방명록 API 훅 (이름 충돌 방지)
   const {
     entries,
     loading: guestbookLoading,
@@ -65,38 +38,31 @@ const TestPage: React.FC = () => {
     error: guestbookError,
     fetchEntries,
     addEntry,
-  } = useGuestbookService(); // 이 훅은 로드 시 자동으로 fetchEntries()를 호출합니다.
+  } = useGuestbookService(); // 로드 시 자동으로 fetchEntries() 호출
 
-  // 방명록 폼 입력을 위한 로컬 상태
   const [guestName, setGuestName] = useState('');
   const [guestMessage, setGuestMessage] = useState('');
 
-  // 방명록 폼 제출 핸들러
   const handleGuestbookSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (guestbookSubmitLoading) return;
-
-    // addEntry가 성공하면 입력창을 비웁니다.
-    await addEntry(guestName, guestMessage);
+    await addEntry(guestMessage);
     setGuestName('');
     setGuestMessage('');
   };
 
-  /*
-  ================================================================
-    3. JSX 렌더링
-  ================================================================
-  */
   return (
-    <div style={{ padding: '2rem', maxWidth: '800px', margin: 'auto' }}>
-      {/* ======================================= */}
-      {/* 🎟️ 번호표 섹션 */}
-      {/* ======================================= */}
+    <div
+      style={{
+        padding: '2rem',
+        maxWidth: '800px',
+        margin: 'auto',
+        backgroundColor: 'white',
+      }}
+    >
       <h1 style={{ borderBottom: '2px solid #333', paddingBottom: '10px' }}>
         🎟️ 번호표 발급 테스트
       </h1>
-
-      {/* 1-1. 번호표 현재 상태 */}
       <section style={{ marginBottom: '2rem' }}>
         <h2>1. 현재 티켓 상태 (Zustand / LocalStorage)</h2>
         {currentTicket ? (
@@ -125,8 +91,6 @@ const TestPage: React.FC = () => {
           <p style={{ color: '#888' }}>- 저장된 티켓 정보가 없습니다 -</p>
         )}
       </section>
-
-      {/* 1-2. 번호표 기능 테스트 폼 */}
       <section style={{ marginBottom: '2rem' }}>
         <h2>2. 기능 테스트</h2>
         <form onSubmit={handleTicketSubmit}>
@@ -165,8 +129,6 @@ const TestPage: React.FC = () => {
           </button>
         </div>
       </section>
-
-      {/* 1-3. 번호표 API 상태 */}
       <section style={{ marginBottom: '2rem' }}>
         <h2>3. 번호표 API 상태</h2>
         {ticketLoading && (
@@ -183,15 +145,9 @@ const TestPage: React.FC = () => {
       </section>
 
       <hr style={{ margin: '3rem 0' }} />
-
-      {/* ======================================= */}
-      {/* ✍️ 방명록 섹션 */}
-      {/* ======================================= */}
       <h1 style={{ borderBottom: '2px solid #333', paddingBottom: '10px' }}>
         ✍️ 방명록 (쓰기/읽기)
       </h1>
-
-      {/* 2-1. 방명록 작성 폼 */}
       <section style={{ marginBottom: '2rem' }}>
         <h2>1. 방명록 작성</h2>
         <form onSubmit={handleGuestbookSubmit}>
@@ -247,8 +203,6 @@ const TestPage: React.FC = () => {
           </button>
         </form>
       </section>
-
-      {/* 2-2. 방명록 목록 */}
       <section>
         <h2>2. 방명록 목록 (최신순)</h2>
         <button
@@ -258,15 +212,11 @@ const TestPage: React.FC = () => {
         >
           {guestbookLoading ? '새로고침 중...' : '새로고침'}
         </button>
-
-        {/* 방명록 API 에러 */}
         {guestbookError && (
           <p style={{ color: 'red', marginTop: '1rem' }}>
             <strong>방명록 에러:</strong> {guestbookError}
           </p>
         )}
-
-        {/* 목록 표시 */}
         <div style={{ marginTop: '1rem' }}>
           {guestbookLoading && <p>... 방명록 목록 로딩 중 ...</p>}
           {!guestbookLoading && entries.length === 0 && (
@@ -286,7 +236,6 @@ const TestPage: React.FC = () => {
                   {new Date(entry.createdAt).toLocaleString()}
                 </span>
               </p>
-              {/* 메시지에 줄바꿈이 적용되도록 pre-wrap 사용 */}
               <p style={{ whiteSpace: 'pre-wrap', margin: 0 }}>
                 {entry.message}
               </p>

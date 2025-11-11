@@ -1,8 +1,6 @@
-// src/Pages/MasterPage.tsx
 import React, { useEffect } from 'react';
 import { useAdminService } from '../hooks/useAdminService';
 
-// --- 스타일 정의 ---
 const thStyle: React.CSSProperties = {
   borderBottom: '2px solid #333',
   padding: '10px 8px',
@@ -14,7 +12,7 @@ const tdStyle: React.CSSProperties = {
   borderBottom: '1px solid #ccc',
   padding: '10px 8px',
   fontFamily: 'monospace',
-  verticalAlign: 'top', // 긴 텍스트(메시지)의 경우 상단 정렬
+  verticalAlign: 'top',
 };
 
 const btnStyle: React.CSSProperties = {
@@ -32,10 +30,8 @@ const dangerBtnStyle: React.CSSProperties = {
   color: 'white',
   borderColor: '#d43f3a',
 };
-// --- 스타일 정의 끝 ---
 
 const MasterPage: React.FC = () => {
-  // Admin 훅에서 모든 상태와 함수를 가져옵니다.
   const {
     waitingListItems,
     guestbookItems,
@@ -49,19 +45,24 @@ const MasterPage: React.FC = () => {
     deleteAllGuestbookItems,
   } = useAdminService();
 
-  // 페이지가 처음 로드될 때 두 데이터(번호표, 방명록)를 모두 가져옵니다.
   useEffect(() => {
     fetchWaitingList();
     fetchGuestbook();
-  }, []); // 빈 배열: 마운트 시 1회만 실행
+    // eslint-disable-next-line
+  }, []);
 
   return (
-    <div style={{ padding: '2rem', maxWidth: '1200px', margin: 'auto' }}>
+    <div
+      style={{
+        padding: '2rem',
+        maxWidth: '1200px',
+        margin: 'auto',
+        backgroundColor: 'white',
+      }}
+    >
       <h1 style={{ borderBottom: '2px solid #333', paddingBottom: '10px' }}>
         마스터 페이지 (데이터 관리)
       </h1>
-
-      {/* --- 글로벌 상태 표시 --- */}
       {error && (
         <p
           style={{
@@ -86,10 +87,6 @@ const MasterPage: React.FC = () => {
           ... 🔄 API 요청 중 ...
         </p>
       )}
-
-      {/* ======================================= */}
-      {/* 1. 번호표 (waitingList) 섹션 */}
-      {/* ======================================= */}
       <section style={{ marginBottom: '3rem' }}>
         <h2>1. 번호표 (waitingList)</h2>
         <div style={{ marginBottom: '1rem' }}>
@@ -154,10 +151,6 @@ const MasterPage: React.FC = () => {
       </section>
 
       <hr style={{ margin: '2rem 0' }} />
-
-      {/* ======================================= */}
-      {/* 2. 방명록 (guestbook) 섹션 */}
-      {/* ======================================= */}
       <section>
         <h2>2. 방명록 (guestbook)</h2>
         <div style={{ marginBottom: '1rem' }}>

@@ -13,12 +13,9 @@ interface UseTicketServiceReturn {
 export function useTicketService(): UseTicketServiceReturn {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-
-  // 스토어에서 액션 가져옴
   const setTicket = useTicketStore((state) => state.setTicket);
   const resetTicket = useTicketStore((state) => state.resetTicket);
 
-  // 전화번호를 받아 Cloud Function 호출
   const requestTicket = async (phoneNumber: string): Promise<void> => {
     if (!phoneNumber) {
       setError('전화번호를 입력하세요');

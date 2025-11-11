@@ -1,6 +1,6 @@
 export interface GuestbookItem {
-  id: string; // Firestore 문서 ID
+  id: string;
   name: string;
   message: string;
-  createdAt: string; // ISO 8601 날짜 문자열
+  createdAt: string;
 }

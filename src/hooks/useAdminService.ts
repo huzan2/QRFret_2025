@@ -1,12 +1,7 @@
-// src/hooks/useAdminService.ts
 import { useState } from 'react';
 import { FirebaseError } from 'firebase/app';
-
-// 1. [수정] 타입 임포트 경로 분리
 import type { WaitingItem } from '../types/ticket';
-import type { GuestbookItem } from '../types/guestbook'; // 👈 사용자님이 변경한 경로
-
-// 2. [수정] 모든 어드민용 함수 임포트
+import type { GuestbookItem } from '../types/guestbook';
 import {
   getAllTicketsFunction,
   deleteTicketFunction,
@@ -17,27 +12,24 @@ import {
 } from '../firebase';
 
 export function useAdminService() {
-  // 두 종류의 상태를 분리하여 관리
   const [waitingListItems, setWaitingListItems] = useState<WaitingItem[]>([]);
   const [guestbookItems, setGuestbookItems] = useState<GuestbookItem[]>([]);
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // 에러 메시지 헬퍼
   const getErrorMsg = (err: unknown): string => {
     return err instanceof FirebaseError || err instanceof Error
       ? err.message
       : '알 수 없는 오류가 발생했습니다.';
   };
 
-  // --- 1. Waiting List (번호표) 함수들 ---
   const fetchWaitingList = async () => {
     setLoading(true);
     setError(null);
     try {
       const result = await getAllTicketsFunction();
-      setWaitingListItems(result.data); // 번호표 상태 업데이트
+      setWaitingListItems(result.data);
     } catch (err: unknown) {
       setError(getErrorMsg(err));
     } finally {
@@ -82,13 +74,12 @@ export function useAdminService() {
     }
   };
 
-  // --- 2. Guestbook (방명록) 함수들 ---
   const fetchGuestbook = async () => {
     setLoading(true);
     setError(null);
     try {
       const result = await getGuestbookEntriesFunction();
-      setGuestbookItems(result.data); // 방명록 상태 업데이트
+      setGuestbookItems(result.data);
     } catch (err: unknown) {
       setError(getErrorMsg(err));
     } finally {
@@ -133,7 +124,6 @@ export function useAdminService() {
     }
   };
 
-  // 반환하는 상태와 함수들
   return {
     waitingListItems,
     guestbookItems,
