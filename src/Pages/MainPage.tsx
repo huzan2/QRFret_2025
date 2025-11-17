@@ -1,9 +1,11 @@
 import styled from 'styled-components';
-import nova_logo from '../assets/nova_logo.png';
-import background_image from '../assets/background_image.png';
-import chatBubble_light from '../assets/chatBubble_light.png';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
+import {
+  background_image,
+  chatBubble_light,
+  nova_logo,
+} from '../styles/images';
 
 const CLICK_COUNT = 7;
 const CLICK_TIME = 300;

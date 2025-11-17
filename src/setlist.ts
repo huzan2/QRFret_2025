@@ -17,23 +17,23 @@ export const setlist: Song[] = [
     artist: 'SURL',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '이예영',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '김상경, 한재민',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '김윤하',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '엄지훈',
       },
       {
-        part: 'key',
+        part: 'K.',
         name: '이서은',
       },
     ],
@@ -44,23 +44,23 @@ export const setlist: Song[] = [
     artist: 'Wave to earth',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '이동현',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '우희태, 허채은',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '채윤',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '장서윤',
       },
       {
-        part: 'key',
+        part: 'K.',
         name: '김민정',
       },
     ],
@@ -71,23 +71,23 @@ export const setlist: Song[] = [
     artist: '한로로',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '이예영',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '우희태, 한재민',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '채윤',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '정재화',
       },
       {
-        part: 'key',
+        part: 'K.',
         name: '김현준',
       },
     ],
@@ -98,23 +98,23 @@ export const setlist: Song[] = [
     artist: '잭킹콩',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '최현석',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '우희태',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '김윤하',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '엄지훈',
       },
       {
-        part: 'key',
+        part: 'K.',
         name: '박이랑',
       },
     ],
@@ -125,23 +125,23 @@ export const setlist: Song[] = [
     artist: '쏜애플',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '김선우',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '허정빈, 조현준',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '이소현',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '정재화',
       },
       {
-        part: 'key',
+        part: 'K.',
         name: '김현준',
       },
     ],
@@ -152,23 +152,23 @@ export const setlist: Song[] = [
     artist: '검정치마',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '이동현',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '허정빈, 허채은',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '이소현',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '인예관',
       },
       {
-        part: 'key',
+        part: 'K.',
         name: '김현수',
       },
     ],
@@ -179,19 +179,19 @@ export const setlist: Song[] = [
     artist: '리도어',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '하윤수',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '허정빈, 허채은',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '정서현',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '이용민',
       },
     ],
@@ -202,23 +202,23 @@ export const setlist: Song[] = [
     artist: '노브레인',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '김선우',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '우희태, 인예관',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '이소현',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '김영균',
       },
       {
-        part: 'key',
+        part: 'K.',
         name: '김현수',
       },
     ],
@@ -229,23 +229,23 @@ export const setlist: Song[] = [
     artist: '리도어',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '김민정',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '조현준, 장지웅',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '채윤',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '한지우',
       },
       {
-        part: 'key',
+        part: 'K.',
         name: '박이랑',
       },
     ],
@@ -256,19 +256,19 @@ export const setlist: Song[] = [
     artist: '나상현씨밴드',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '김건우',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '쟝지웅',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '임은수',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '김영균',
       },
     ],
@@ -279,19 +279,19 @@ export const setlist: Song[] = [
     artist: 'SURL',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '김준서',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '허정빈, 조현준',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '임은수',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '정재화',
       },
     ],
@@ -302,19 +302,19 @@ export const setlist: Song[] = [
     artist: '라쿠나',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '강윤호',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '김상경, 허정빈',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '김윤하',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '엄지훈',
       },
     ],
@@ -325,23 +325,23 @@ export const setlist: Song[] = [
     artist: '터치드',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '박가영',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '장지웅, 김상경',
       },
       {
-        part: 'bass',
-        name: '임읕수',
+        part: 'B.',
+        name: '임은수',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '김영균',
       },
       {
-        part: 'key',
+        part: 'K.',
         name: '이서은',
       },
     ],
@@ -352,23 +352,23 @@ export const setlist: Song[] = [
     artist: 'Amy Winehouse',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '김준서',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '조현준',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '김윤하',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '임아연',
       },
       {
-        part: 'key',
+        part: 'K.',
         name: '이서은',
       },
     ],
@@ -379,23 +379,23 @@ export const setlist: Song[] = [
     artist: '웨스트오브',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '김선우',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '김상경, 장지웅',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '정서현',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '임아연',
       },
       {
-        part: 'key',
+        part: 'K.',
         name: '김민정',
       },
     ],
@@ -406,23 +406,23 @@ export const setlist: Song[] = [
     artist: '검정치마',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '김건우',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '조현준, 허채은',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '채윤',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '장서윤',
       },
       {
-        part: 'key',
+        part: 'K.',
         name: '김현준',
       },
     ],
@@ -433,24 +433,24 @@ export const setlist: Song[] = [
     artist: 'The poles',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '최현석',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '김상경, 최현석',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '김윤하',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '이용민',
       },
       {
-        part: 'key',
-        name: '이에영',
+        part: 'K.',
+        name: '이예영',
       },
     ],
   },
@@ -460,23 +460,23 @@ export const setlist: Song[] = [
     artist: '캔트비블루',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '최현석',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '한재민, 김윤하',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '정서현',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '엄지훈',
       },
       {
-        part: 'key',
+        part: 'K.',
         name: '김민정',
       },
     ],
@@ -487,23 +487,23 @@ export const setlist: Song[] = [
     artist: 'Coldplay',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '강윤호',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '조현준',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '정서현',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '장서윤',
       },
       {
-        part: 'key',
+        part: 'K.',
         name: '김현준',
       },
     ],
@@ -514,19 +514,19 @@ export const setlist: Song[] = [
     artist: 'The poles',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '김건우',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '장지웅, 한지우',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '이소현',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '인예관',
       },
     ],
@@ -537,19 +537,19 @@ export const setlist: Song[] = [
     artist: 'The poles',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '하윤수',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '허채은, 허정빈',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '임은수',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '이용민',
       },
     ],
@@ -560,19 +560,19 @@ export const setlist: Song[] = [
     artist: '14fret 자작곡',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '김건우',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '김상경, 장지웅',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '임은수',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '한지우',
       },
     ],
@@ -583,23 +583,23 @@ export const setlist: Song[] = [
     artist: '터치드',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '박가영',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '장지웅, 허채은',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '한지우',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '김영균',
       },
       {
-        part: 'key',
+        part: 'K.',
         name: '김현수',
       },
     ],
@@ -610,23 +610,23 @@ export const setlist: Song[] = [
     artist: '유다빈밴드',
     sessions: [
       {
-        part: 'voc',
+        part: 'V.',
         name: '김준서',
       },
       {
-        part: 'eg',
+        part: 'G.',
         name: '허정빈, 장지웅',
       },
       {
-        part: 'bass',
+        part: 'B.',
         name: '한지우',
       },
       {
-        part: 'drum',
+        part: 'D.',
         name: '엄지훈',
       },
       {
-        part: 'key',
+        part: 'K.',
         name: '이서은, 박이랑',
       },
     ],

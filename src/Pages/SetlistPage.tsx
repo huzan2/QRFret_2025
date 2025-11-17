@@ -11,14 +11,14 @@ import {
   useLikePendingStore,
 } from '../store/likeStore';
 import React, { useEffect, useState } from 'react';
-import lineIcon from '../assets/lineImage.png';
+import { lineIcon } from '../styles/images';
 
 interface LikeButtonProps {
   itemId: string;
 }
 
 const OriginalLyrics = `
-    답답한 세상 속
+답답한 세상 속
 숨쉴 곳 하나 없고
 내게 바라는 건
 계속 늘어만 가는데
@@ -132,7 +132,13 @@ const SetlistPage: React.FC = () => {
                   <SongNumber>{(idx % 12) + 1}</SongNumber>
                   <SongTitleWrapper>
                     <Title>{song.title}</Title>
-                    <Description>{song.artist}</Description>
+                    <Description>
+                      {song.sessions.map((session, i) => (
+                        <SessionTag key={i}>
+                          {`${session.part}${session.name} `}
+                        </SessionTag>
+                      ))}
+                    </Description>
                   </SongTitleWrapper>
                   <IconWrapper>
                     {song.idx === 22 ? (
@@ -162,6 +168,15 @@ const SetlistPage: React.FC = () => {
 
 export default SetlistPage;
 
+const SessionTag = styled.span`
+  display: inline-block;
+  // background-color: #323743;
+  padding: 0 7px 5px 0;
+  border-radius: 4px;
+  font-size: 13px;
+  white-space: nowrap;
+`;
+
 const SubContainer = styled.div`
   display: flex;
   width: 100%;
@@ -187,7 +202,7 @@ const IconWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 `;
 
 const StyleLineIcon = styled.img`
@@ -199,7 +214,7 @@ const ChapterTitle = styled.p`
   width: 100%;
   font-size: 20px;
   color: #f3f4f6ff;
-  padding: 30px 0 0 15px;
+  padding: 30px 0 10px 15px;
 `;
 
 const HeartContainer = styled.div`
@@ -224,9 +239,13 @@ const Title = styled.p`
   color: white;
   font-size: 16px;
 `;
-const Description = styled.p`
+const Description = styled.div`
   font-size: 14px;
   color: #bdc1caff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
 `;
 
 const SongTitleWrapper = styled.div`
@@ -234,7 +253,7 @@ const SongTitleWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 75%;
+  width: 70%;
   gap: 8px;
 `;
 

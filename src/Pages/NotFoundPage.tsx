@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import background_image from '../assets/background_image.png';
+import { background_image } from '../styles/images';
 import { BackgroundImage, MainWrapper } from './MainPage';
 import { BlackLayer } from './CommentPage';
 import { Description, StyledButton, Title } from './TicketPage';

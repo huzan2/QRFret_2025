@@ -1,13 +1,15 @@
 import styled from 'styled-components';
-import background_image from '../assets/background_image.png';
-import { BackgroundImage, ChatImageLight, MainWrapper } from './MainPage';
-import chatBubble_dark from '../assets/chatBubble_dark.png';
 import { useGuestbookService } from '../hooks/useGuestbookService';
 import { useEffect, useState, type ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import profile1 from '../assets/profile1.png';
-import profile2 from '../assets/profile2.png';
-import profile3 from '../assets/profile3.png';
+import {
+  profile1,
+  profile2,
+  profile3,
+  chatBubble_dark,
+  background_image,
+} from '../styles/images';
+import { BackgroundImage, ChatImageLight } from './MainPage';
 
 const profileArr = [profile1, profile2, profile3];
 
@@ -38,7 +40,7 @@ const CommentPage: React.FC = () => {
 
   return (
     <>
-      <MainWrapper>
+      <CommentMainWrapper>
         <BlackLayer>
           <BackgroundImage src={background_image} />
         </BlackLayer>
@@ -95,12 +97,26 @@ const CommentPage: React.FC = () => {
             navigate('/');
           }}
         />
-      </MainWrapper>
+      </CommentMainWrapper>
     </>
   );
 };
 
 export default CommentPage;
+
+const CommentMainWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 92dvh; // 모바일 브라우저 상/하단바 고려해 dynamic viewport height 적용
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  overflow: hidden;
+`;
 
 const CommentText = styled.p`
   color: white;
@@ -150,9 +166,9 @@ const CommentWrapper = styled.div`
 
 const CommentAreaWrapper = styled.div`
   width: 100%;
-  height: 65%;
+  height: 100%;
   position: relative;
-  padding: 0 5px 0 5px;
+  padding: 0 5px -30px 5px;
   z-index: 1;
   overflow-y: auto;
   display: flex;
