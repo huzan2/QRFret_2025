@@ -14,7 +14,7 @@
 
 ### 사용 기술
 
-|                      |                             |
+| 분류                 |            기술             |
 | -------------------- | :-------------------------: |
 | **FrontEnd**         |   `React+Vite+TypeScript`   |
 | **State Management** |          `Zustand`          |
