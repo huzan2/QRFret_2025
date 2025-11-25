@@ -66,11 +66,12 @@
 ### 페이지 화면
 
 <p align="center">
-<img width="45%" alt="Image" src="https://github-production-user-asset-6210df.s3.amazonaws.com/95648841/518649030-cdb338c1-8e0e-42e4-b9ff-53b77ddac52e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251125T130332Z&X-Amz-Expires=300&X-Amz-Signature=9b56ea1df740f3e2d11ccc2d0a80132e59dfc166573ee1ae3ffe6ecf757719a5&X-Amz-SignedHeaders=host"/>
-<img width="45%" alt="Image" src="https://github-production-user-asset-6210df.s3.amazonaws.com/95648841/518649902-4e6be0b9-2bef-458c-bbc7-a165a4013cd5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251125T130437Z&X-Amz-Expires=300&X-Amz-Signature=c1665e417014a8afdfcd1d45abb5023487c1154be5a7b5f076c946ea5581517c&X-Amz-SignedHeaders=host"/>
-<img width="45%" alt="Image" src="https://github-production-user-asset-6210df.s3.amazonaws.com/95648841/518651511-da6abd7f-0b5b-4a82-b214-42a5c9dd47ad.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251125T130752Z&X-Amz-Expires=300&X-Amz-Signature=47c879baf543582c8571ed723ab248206e670dfbb3d0ed0f81858e05a7c17450&X-Amz-SignedHeaders=host"/>
-<img width="45%" alt="Image" src="https://github-production-user-asset-6210df.s3.amazonaws.com/95648841/518652019-c47a2826-fa20-4c7e-8911-414580797397.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251125T130855Z&X-Amz-Expires=300&X-Amz-Signature=4bfce782751f954d88a4d360143732b9db7d9a434fc1daa491f3aacc8df492fc&X-Amz-SignedHeaders=host"/>
-<img width="45%" alt="Image" src="https://github-production-user-asset-6210df.s3.amazonaws.com/95648841/518652540-60c99b89-535e-4ec5-9b8c-5482dab3f5db.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251125%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251125T131010Z&X-Amz-Expires=300&X-Amz-Signature=fcda3bee08e33f1c211bf6c677afc33697fb34cfd315f2e23f7e152030866a42&X-Amz-SignedHeaders=host"/>
+<img width="45%" alt="Image" src="https://github.com/user-attachments/assets/34e92ab2-2138-45b3-870b-2028d5edb132"/>
+<img width="45%" alt="Image" src="https://github.com/user-attachments/assets/5f73c27d-7b65-43ac-880b-a2cd458a5ef2"/>
+<img width="45%" alt="Image" src="https://github.com/user-attachments/assets/d0397055-6573-4195-a727-844e4ba3bbf8"/>
+<img width="45%" alt="Image" src="https://github.com/user-attachments/assets/ee333e75-5e63-4bda-baf5-8342464b026f"/>
+<img width="45%" alt="Image" src="https://github.com/user-attachments/assets/8c14704b-1c4e-445e-aa01-fd956a172d6d"/>
+<img width="45%" alt="Image" src="https://github.com/user-attachments/assets/7788fad4-1315-48b2-999d-f48060703899"/>
 </p>
 
 ### 발생 이슈 및 트러블슈팅
@@ -81,3 +82,6 @@
 2. **좋아요 기능 반응속도 이슈**
    - 문제: 서버 딜레이로 인해 좋아요(하트)버튼 클릭시 UI 반응이 느림
    - 해결: 좋아요 버튼 클릭시 UI를 먼저 변경하고, 요청 발송 및 처리는 비동기적으로 수행. 요청 실패 시 UI를 원래대로 롤백하는 로직을 구현하여 UX와 신뢰성 모두 향상
+3. **이미지 용량 이슈**
+   - 문제: 이미지를 프로젝트 파일에 직접 첨부하여 랜더링하니 접속 시마다 과도한 다운로드 용량을 요구해 비용 과금 위험성 증가
+   - 해결: 이미지 확장자를 webp 형식으로 변경하고, Firebase Storage에 이미지를 업로드 후 이미지 링크를 불러오는 식으로 다운로드 용량 절감
